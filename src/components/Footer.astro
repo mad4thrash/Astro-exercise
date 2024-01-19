@@ -1,8 +1,16 @@
 ---
-const platform = "github";
-const username = "mad4thrash";
+import Social from '../components/Social.astro'
 ---
-
+<style>
+    footer {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+  
 <footer>
-  <p>Learn more about my projects on <a href={`https://www.${platform}.com/${username}`}>{platform}</a>!</p>
+  <Social platform="twitter" username="mad4thrash" />
+  <Social platform="github" username="mad4thrash" />
+  <Social platform="linkedin" username="mad4thrash" />
 </footer>
