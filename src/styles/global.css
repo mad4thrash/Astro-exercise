@@ -21,17 +21,20 @@ html {
   }
   .nav-links {
     width: 100%;
-    top: 5rem;
-    left: 48px;
-    background-color: #ff9776;
-    display: none;
+    background-color: hsla(0, 0%, 100%, 1);
+    transform: translateX(-120%);
     margin: 0;
+    transition: 0.4s ease-in-out;
+    top: 0;
+    left: 0;
+    position:fixed;
+    z-index:999;
   }
   
   .nav-links a {
     display: block;
     text-align: center;
-    padding: 10px 0;
+    padding: 2rem 0;
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: bold;
@@ -44,7 +47,7 @@ html {
   }
   
   .expanded {
-    display: unset;
+    transform: translateX(0);
   }
   
   @media screen and (min-width: 636px) {
@@ -68,14 +71,45 @@ html {
   .hamburger {
     padding-right: 20px;
     cursor: pointer;
+    position:absolute;
+    z-index:1000;
+    top: 1rem;
+    right: 1rem;
   }
   
-  .hamburger .line {
+  .hamburger .line-one {
     display: block;
     width: 40px;
     height: 5px;
     margin-bottom: 10px;
-    background-color: #ff9776;
+    background-color: #000000;
+    transition: all 0.4s ease-in-out;
+  }
+  .hamburger .line-two {
+    display: block;
+    width: 40px;
+    height: 5px;
+    margin-bottom: 10px;
+    background-color: #000000;
+    transition: all 0.4s ease-in-out;
+  }
+  .hamburger .line-three {
+    display: block;
+    width: 40px;
+    height: 5px;
+    margin-bottom: 10px;
+    background-color: #000000;
+    transition: all 0.4s ease-in-out;
+  }
+  .line-one-expanded {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+  .line-two-expanded {
+    transform: rotate(-45deg) translate(5px, -6px);
+    
+  }
+  .line-three-expanded {
+    opacity: 0;
   }
 
   html.dark {
